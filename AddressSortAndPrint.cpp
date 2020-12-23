@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <cmath>
 #include <vector>
+#include <filesystem>
 #include <OpenXLSX.hpp>
 
 #ifdef _WIN32
@@ -76,5 +77,11 @@ std::string get_path() {
 }
 
 std::vector<Person> parse_document(const std::string& path) {
+    using OpenXLSX::XLDocument;
+    XLDocument doc;
+    doc.open(path);
 
+    while (true) {
+
+    }
 }
